@@ -1,20 +1,17 @@
 <template>
     <div class="container">
+        <Assignments></Assignments>
     </div>
 </template>
 
 <script>
+
+    import Assignments from './Assignments.vue'
+
     export default {
-        props: {
-
-        },
-        data() {
-            return {
-
-            }
-        },
-        mounted() {
-            console.log('Component mounted.')
+        components: {
+            Assignments
         }
     }
+
 </script>

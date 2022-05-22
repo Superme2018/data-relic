@@ -1,4 +1,4 @@
-<html>
+<html class="h-full">
 
 <head>
 
@@ -8,7 +8,7 @@
 
 </head>
 
-<body>
+<body class="h-full grid place-items-center">
 
     <div id="app">
         <example-component-two></example-component-two>
