@@ -33,7 +33,6 @@
 <body>
 
     <div id="app">
-
        <example-component type="primary">Primary</example-component>
        <example-component type="secondary">Secondary</example-component>
        <example-component :processing=true>Default</example-component>
