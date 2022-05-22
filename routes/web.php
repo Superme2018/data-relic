@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('vue-non-component-basic');
+    return view('index');
+    //return view('vue-non-component-basic');
 });
