@@ -23,7 +23,7 @@
 
         <div id="app">
 
-            <section v-show="inProgressTasks">
+            <section v-show="inProgressTasks.length">
                 <h2 class="font-bold mb-2">In Progress:</h2>
                 <ul>
                     <li
