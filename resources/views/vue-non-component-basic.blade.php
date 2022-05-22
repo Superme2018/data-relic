@@ -68,6 +68,7 @@
             <p>
                 @{{ greeting }} (@{{ greeting.length }})
             </p>
+
         </div>
 
         <script>
@@ -113,6 +114,7 @@
             Vue.createApp(app).mount('#app');
 
         </script>
+
     </body>
 
 </html>
