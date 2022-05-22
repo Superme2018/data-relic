@@ -7,6 +7,7 @@
 
                     <div class="card-body">
                         I'm an example component.
+                        <input type="text" id="input" />
                     </div>
                 </div>
             </div>
@@ -15,9 +16,13 @@
 </template>
 
 <script>
+
+
+
     export default {
         mounted() {
             console.log('Component mounted.')
+            alert('Mounted, YOY!')
         }
     }
 </script>
