@@ -1,16 +1,13 @@
 <template>
     <div class="container">
-        <section v-show="inProgressTasks.length">
-            <h2 class="font-bold mb-2">In Progress:</h2>
+        <section v-show="assignments.length">
+            <h2 class="font-bold mb-2">{{ title }}</h2>
             <ul>
-                <li
-                    v-for="task in inProgressTasks"
+                <example-assignment
+                    v-for="task in assignments"
                     :key="task.id"
-                >
-                    <label>{{ task.name }}
-                        <input type="checkbox" v-model="task.complete">
-                    </label>
-                </li>
+                    :task="task">
+                </example-assignment>
             </ul>
         </section>
     </div>
@@ -18,6 +15,9 @@
 
 <script>
     export default {
-
+        props: {
+            assignments: Array,
+            title: String
+        }
     }
 </script>

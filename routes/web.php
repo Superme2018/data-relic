@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('vue-component-two');
+    return view('vue3jsLearning/vue-assignments');
     //return view('vue-non-component-basic');
 });
 

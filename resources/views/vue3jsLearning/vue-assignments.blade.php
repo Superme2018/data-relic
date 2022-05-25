@@ -11,7 +11,7 @@
 <body class="h-full grid place-items-center">
 
     <div id="app">
-        <example-component-two></example-component-two>
+        <example-assignments></example-assignments>
     </div>
 
     <script src="{{ mix('/js/app.js') }}"></script>

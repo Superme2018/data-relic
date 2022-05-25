@@ -1,31 +1,9 @@
 <template>
     <div class="container">
-        <section v-show="inProgressTasks.length">
-            <h2 class="font-bold mb-2">In Progress:</h2>
-            <ul>
-                <li
-                    v-for="task in inProgressTasks"
-                    :key="task.id"
-                >
-                    <label>{{ task.name }}
-                        <input type="checkbox" v-model="task.complete">
-                    </label>
-                </li>
-            </ul>
-        </section>
 
-        <section v-show="completedTasks.length" class="mt-5">
-            <h2 class="font-bold mb-2">Completed:</h2>
-            <ul>
-                <li
-                    v-for="task in completedTasks"
-                    :key="task.id"
-                >
-                    <label>{{ task.name }}
-                        <input type="checkbox" v-model="task.complete">
-                    </label>
-                </li>
-            </ul>
+        <section class="space-y-5">
+            <example-assignment-list :assignments="filters.inProgress" title="Tasks in progress:"></example-assignment-list>
+            <example-assignment-list :assignments="filters.completed" title="Tasks Completed:"></example-assignment-list>
         </section>
 
         <pre>
@@ -75,12 +53,12 @@
         },
         computed:
         {
-            completedTasks(){
-                return this.todos.filter(task => task.complete);
-            },
-            inProgressTasks()
+            filters()
             {
-                return this.todos.filter(task => !task.complete);
+                return {
+                    inProgress: this.todos.filter(task => task.complete),
+                    completed: this.todos.filter(task => !task.complete)
+                }
             }
         },
     }
