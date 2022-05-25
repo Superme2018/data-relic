@@ -1,32 +1,54 @@
 <template>
-  <div class="container">
-       <div class="datatable"></div>
-  </div>
+  <hot-table
+    :settings="hotSettings">
+  </hot-table>
 </template>
 
 <script>
-
-  import Handsontable from 'handsontable';
+  import { defineComponent } from 'vue';
+  import { HotTable } from '@handsontable/vue3';
+  import { registerAllModules } from 'handsontable/registry';
   import 'handsontable/dist/handsontable.full.css';
 
-    const data = [
-        ['', 'Tesla', 'Volvo', 'Toyota', 'Ford'],
-        ['2019', 10, 11, 12, 13],
-        ['2020', 20, 11, 14, 13],
-        ['2021', 30, 15, 12, 13]
-    ];
+  // register Handsontable's modules
+  registerAllModules();
 
-export default {
-    mount()
-    {
-        const container = document.getElementById('datatable');
-
-        const hot = new Handsontable(container, {
-            data: data,
+  export default defineComponent({
+    data() {
+      return {
+        hotSettings: {
+            licenseKey: 'non-commercial-and-evaluation',
+            height: 'auto',
             rowHeaders: true,
-            colHeaders: true
-        });
+            columnSorting: true,
+            filters: true,
+            dropdownMenu: ['filter_by_condition', 'filter_action_bar', 'filter_by_value'],
+            colHeaders: ['Brand', 'Model', 'Code name', 'Country of origin'],
+            data: [
+                ['Tesla', 'Model 3', 'BlueStar', 'USA'],
+                ['Tesla', 'Model S', 'WhiteStar', 'USA'],
+                ['Mitsubishi', 'iMiEV', '', 'Japan'],
+                ['Ford', 'Focus EV', '', 'USA'],
+                ['Mitsubishi', 'iMiEV Sport', '', 'Japan'],
+                ['Tesla', 'Roadster', 'DarkStar', 'USA'],
+                ['Volkswagen', 'e-Golf','', 'Germany'],
+                ['Volkswagen', 'E-Up!', '', 'Germany'],
+                ['Ford', 'C-Max Energi', '', 'USA'],
+                ['BYD', 'Denza', '', 'China'],
+                ['BYD', 'e5', '', 'China'],
+                ['BYD', 'e6', '', 'China']
+            ],
+            columns: [
+                { type: 'text' },
+                { type: 'text' },
+                { type: 'text' },
+                { type: 'text' },
+            ],
+        }
+      };
+    },
+    components: {
+      HotTable,
     }
-};
-
+  });
 </script>
