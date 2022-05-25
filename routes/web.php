@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('vue-component-two');
+    //return view('vue-non-component-basic');
 });
+
+
+Route::get('/handsontable', function () {
+    return view('handson-table');
+});
+
