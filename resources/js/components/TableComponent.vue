@@ -5,9 +5,14 @@
 </template>
 
 <script>
+
   import { defineComponent } from 'vue';
+
+  // Handsontable
   import { HotTable } from '@handsontable/vue3';
   import { registerAllModules } from 'handsontable/registry';
+
+  // Module CSS
   import 'handsontable/dist/handsontable.full.css';
 
   // register Handsontable's modules
@@ -49,6 +54,10 @@
     },
     components: {
       HotTable,
+    },
+    mounted()
+    {
+        console.log('Component mounted.');
     }
   });
 </script>
