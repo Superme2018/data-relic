@@ -1,6 +1,6 @@
 <template>
     <li>
-        <label>{{ task.name }}
+        <label class="p-3 flex justify-between items-center">{{ task.name }}
             <input type="checkbox" v-model="task.complete">
         </label>
     </li>

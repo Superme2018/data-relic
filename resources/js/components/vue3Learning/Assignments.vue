@@ -4,6 +4,9 @@
         <section class="space-y-5">
             <example-assignment-list :assignments="filters.inProgress" title="Tasks in progress:"></example-assignment-list>
             <example-assignment-list :assignments="filters.completed" title="Tasks Completed:"></example-assignment-list>
+
+            <example-assignment-create @add="add"></example-assignment-create>
+
         </section>
 
         <pre>
@@ -49,7 +52,16 @@
         {
             toggle(){
                 this.active = !this.active;
+            },
+            add(name)
+            {
+                this.todos.push({
+                    name: name,
+                    complete: false,
+                    id: this.todos.length + 1,
+                })
             }
+
         },
         computed:
         {
