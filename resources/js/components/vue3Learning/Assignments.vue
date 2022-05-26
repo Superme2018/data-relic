@@ -37,9 +37,9 @@
                 buttonClasse: 'text-green',
                 active: false,
                 todos: [
-                    { name: 'Wash Car', complete: false, id: 1 },
-                    { name: 'Get cat litter', complete: false, id: 2  },
-                    { name: 'Do more code', complete: false, id: 3  }
+                    { name: 'Wash Car', complete: false, id: 1, tag: 'math' },
+                    { name: 'Get cat litter', complete: false, id: 2, tag: 'science' },
+                    { name: 'Do more code', complete: false, id: 3, tag: 'reading' }
                 ]
             };
         },
