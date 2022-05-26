@@ -11,6 +11,7 @@ import Assignment from './components/vue3Learning/Assignment.vue';
 import Assignments from './components/vue3Learning/Assignments.vue';
 import AssignmentList from './components/vue3Learning/AssignmentList.vue';
 import AssignmentCreate from './components/vue3Learning/AssignmentCreate.vue';
+import AssignmentTags from './components/vue3Learning/AssignmentTags.vue';
 
 const app = createApp({});
 
@@ -20,6 +21,7 @@ app.component('table-component', TableComponent)
    .component('example-assignments', Assignments)
    .component('example-assignment-list', AssignmentList)
    .component('example-assignment-create', AssignmentCreate)
+   .component('example-assignment-tags', AssignmentTags)
    .mount('#app');
 
 require('./bootstrap');
