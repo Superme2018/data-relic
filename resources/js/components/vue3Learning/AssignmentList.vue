@@ -4,8 +4,8 @@
             <h2 class="font-bold mb-2">{{ title }} <span>({{ assignments.length }})</span></h2>
 
             <example-assignment-tags
+                v-model:currentTag="currentTag"
                 :initial-tags="assignments.map(a => a.tag)"
-                :current-tag="currentTag"
                 @change="currentTag = $event">
             </example-assignment-tags>
 

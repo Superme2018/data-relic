@@ -30,17 +30,22 @@
 </template>
 
 <script>
+
     export default {
+        created()
+        {
+            fetch('http://data-relic.local/data-source')
+                .then(response => response.json())
+                .then(todos => {
+                    this.todos = todos;
+                })
+        },
         data(){
             return {
                 greeting: 'hello world!',
                 buttonClasse: 'text-green',
                 active: false,
-                todos: [
-                    { name: 'Wash Car', complete: false, id: 1, tag: 'math' },
-                    { name: 'Get cat litter', complete: false, id: 2, tag: 'science' },
-                    { name: 'Do more code', complete: false, id: 3, tag: 'reading' }
-                ]
+                todos: []
             };
         },
         mounted() {

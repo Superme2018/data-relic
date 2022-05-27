@@ -23,3 +23,39 @@ Route::get('/handsontable', function () {
     return view('handson-table');
 });
 
+Route::get('/data-source', function () {
+
+    return response()->json(
+
+        [
+            [
+                "name" => "Wash Car",
+                "complete" => false,
+                "id" => 1,
+                "tag" => "math"
+            ],
+            [
+                "name" => "Get cat litter",
+                "complete" => false,
+                "id" => 2,
+                "tag" => "science"
+            ],
+            [
+                "name" => "Wash Car",
+                "complete" => false,
+                "id" => 3,
+                "tag" => "reading"
+            ],
+            [
+                "name" => "Look at .csv upload service",
+                "complete" => true,
+                "id" => 4,
+                "tag" => "programming"
+            ]
+        ]
+
+    );
+});
+
+
+

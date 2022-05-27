@@ -1,7 +1,7 @@
 <template>
     <div class="flex gap-2">
         <button
-            @click="$emit('change', tag)"
+            @click="$emit('update:currentTag', tag)"
             v-for="tag in tags"
             class="border rounded px-1 py-2 text-xs"
             :class="{
