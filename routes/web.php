@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/svg-animation', function () {
+    return view('svg/svg-code');
+});
+
 Route::get('/', function () {
     return view('vue3jsLearning/vue-assignments');
     //return view('vue-non-component-basic');

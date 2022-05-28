@@ -1,0 +1,17 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="10">
+
+    <style>
+
+        circle {
+            fill: green;
+        }
+
+        .rectClass {
+            fill: white;
+        }
+
+    </style>
+
+    <rect class="rectClass" width="100%" height="10" />
+
+</svg>
