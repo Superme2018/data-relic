@@ -11,8 +11,20 @@
 
 <style>
 
+    @keyframes example {
+        0%   { left:0px; top:0px; }
+        50%  { left:400px; top:0px; }
+        100%  { left:0px; top:0px; }
+    }
+
+    .logo-container
+    {
+        animation-name: example;
+        animation-duration: 4s;
+        position: relative;
+    }
+
     .backgroud-color {
-        background: rgb(13,17,16);
         background: linear-gradient(180deg, rgba(13,17,16,1) 0%, rgb(9, 18, 27) 100%);
     }
 
@@ -30,7 +42,11 @@
         <div class="grid grid-cols-1 grid-rows-1 gap-5 w-1/2">
 
             <img class="bar w-full" src="svg/ui-element.svg" alt="" >
-            <img class="bar w-full" src="svg/text-logo.svg" alt="" >
+
+            <div class="logo-container">
+                <img class="bar w-full" src="svg/text-logo.svg" alt="" >
+            </div>
+
             <img class="bar w-full" src="svg/ui-element.svg" alt="" >
 
             <div class="flex flex-row gap-1 text-black">
