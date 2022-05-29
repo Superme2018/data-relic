@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Route;
 
 */
 
+Route::get('/post-processing-effects', function () {
+    return view('other/post-processing-effects');
+});
+
 Route::get('/tailwind', function () {
     return view('other/tailwind');
 });

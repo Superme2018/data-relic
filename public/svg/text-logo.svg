@@ -1,0 +1,19 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="90">
+
+    <style>
+        .small
+        {
+            fill: white;
+            font: bold 120px sans-serif;
+        }
+    </style>
+
+    <filter id="filter">
+        <feGaussianBlur stdDeviation="1 1" width="100%" in="flood" edgeMode="wrap" result="blur"/>
+    </filter>
+
+    <text x="0" y="100%" class="small" filter="url(#filter)">DATA RELIC</text>
+
+</svg>
+
+
