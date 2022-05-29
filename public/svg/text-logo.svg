@@ -1,10 +1,10 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="90">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="55">
 
     <style>
         .small
         {
             fill: white;
-            font: bold 120px sans-serif;
+            font: bold 75px sans-serif;
         }
     </style>
 
