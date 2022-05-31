@@ -10,6 +10,9 @@
 </head>
 
 <style>
+
+    /* Color Blend */
+
     @keyframes color-flow {
         0%   {background-color:red; border-color: red; }
         25%  {background-color:yellow; border-color: yellow; }
@@ -18,51 +21,110 @@
         100% {background-color:red; border-color: red }
     }
 
-    @keyframes long-in-from-right {
-        0%   { left:100%; top:0px; opacity: 0; }
+    .color-mad
+    {
+        animation-delay: 2.5s;
+        animation-name: color-flow;
+        animation-duration: 4s;
+    }
+
+    /* Logo Animations */
+
+    @keyframes logo-in-from-right {
+        0%   { left:500%; top:0px; opacity: 0; }
         100%  { left:0px; top:0px; opacity: 1; }
     }
 
-    @keyframes short-up-from-down {
+    @keyframes logo-out-to-left {
+        0%   { left:0; top:0px; opacity: 1; }
+        100%  { left:-120%; top:0px; opacity: 0; }
+    }
+
+    .logo-animation-in
+    {
+        animation-name: logo-in-from-right;
+        animation-duration: 2s;
+        position: relative;
+    }
+
+    .logo-animation-out
+    {
+        animation-name: logo-out-to-left;
+        animation-duration: 1.2s;
+        position: relative;
+
+        opacity: 0;
+    }
+
+    /* Bar Animations */
+
+    @keyframes bar-in-from-right {
+        0%   { left:300%; top:0px; opacity: 0; }
+        100%  { left:0px; top:0px; opacity: 1; }
+    }
+
+    @keyframes bar-out-to-left {
+        0%   { left:0; top:0px; opacity: 1; }
+        100%  { left:-120%; top:0px; opacity: 0; }
+    }
+
+    .bar-animation-in
+    {
+        animation-name: bar-in-from-right;
+        animation-duration: 1s;
+        position: relative;
+    }
+
+    .bar-animation-out
+    {
+        animation-name: bar-out-to-left;
+        animation-duration: 1s;
+        position: relative;
+
+        opacity: 0;
+    }
+
+    /* Button Animation */
+
+    @keyframes buttons-up-from-down {
         0%   { left:0; top:100%; opacity: 0; }
         100%  { left:0px; top:0px; opacity: 1; }
     }
 
-    .bar-01-container {
-        animation-name: long-in-from-right;
-        animation-duration: 0.5s;
-        position: relative;
+
+    @keyframes buttons-out-to-left {
+        0%   { left:0; top:0; opacity: 1; }
+        100%  { left:-200%; top:0; opacity: 0; }
     }
 
-    .bar-02-container {
-        animation-name: long-in-from-right;
-        animation-duration: 0.5s;
-        position: relative;
-    }
-
-    .logo-container
+    .buttons-animation-in
     {
-        animation-name: long-in-from-right;
-        animation-duration: 1.2s;
-        position: relative;
-    }
-
-    .buttons-container
-    {
-
         opacity: 1;
         position: relative;
 
-        animation-name: short-up-from-down;
+        animation-name: buttons-up-from-down;
         animation-play-state: paused;
-        animation-duration: 1.2s;
+        animation-duration: 0.5s;
     }
 
-    .color-mad
+    .buttons-animation-out
     {
-        animation-delay: 2s;
-        animation-name: color-flow;
-        animation-duration: 4s;
+
+        position: relative;
+
+        animation-name: buttons-out-to-left;
+        animation-play-state: paused;
+        animation-duration: 1s;
+
+        opacity: 0;
+
+    }
+
+    /* Other */
+
+    @keyframes long-up {
+        0%   { left:0; top:0px; opacity: 1; }
+        100%  { left:-80%; top:0px; opacity: 0; }
     }
 
     .backgroud-color {
@@ -77,22 +139,22 @@
 
         <div class="grid grid-cols-1 grid-rows-1 gap-5 w-1/2">
 
-            <div class="bar-01-container">
-                <img class="10 w-full" src="svg/ui-element.svg" alt="" >
+            <div class="bar-01-container bar-animation-in">
+                <img class="10 w-full" src="svg/ui-element.svg?<?php echo rand(0, 2000) ?>" alt="" >
             </div>
 
-            <div class="logo-container">
-                <img class="bar w-full" src="svg/text-logo.svg" alt="" >
+            <div class="logo-container logo-animation-in">
+                <img class="w-full" src="svg/text-logo.svg?<?php echo rand(0, 2000) ?>" alt="" >
             </div>
 
-            <div class="bar-02-container">
-                <img class="w-full" src="svg/ui-element.svg" alt="" >
+            <div class="bar-02-container bar-animation-in">
+                <img class="w-full" src="svg/ui-element.svg?<?php echo rand(0, 2000) ?>" alt="" >
             </div>
 
-            <div class="buttons-container flex flex-row gap-1 text-black">
-                <button class="color-mad font-bold text-sm bg-slate-100 hover:bg-black hover:text-white font-bold py-2 w-32 border-2 hover:border-2 border-white">UPLOAD CSV</button>
-                <button class="color-mad font-bold text-sm bg-slate-100 hover:bg-black hover:text-white font-bold py-2 w-32 border-2 hover:border-2 border-white">MODIFY DATA</button>
-                <button class="color-mad font-bold text-sm bg-slate-100 hover:bg-black hover:text-white font-bold py-2 w-32 border-2 hover:border-2 border-white">VIEW DATA</button>
+            <div class="buttons-container buttons-animation-in flex flex-row gap-1 text-black">
+                <button id="upload_csv" class="color-mad font-bold text-sm bg-slate-100 hover:bg-black hover:text-white font-bold py-2 w-32 border-2 hover:border-2 border-white">UPLOAD CSV</button>
+                <button id="modify_data" class="color-mad font-bold text-sm bg-slate-100 hover:bg-black hover:text-white font-bold py-2 w-32 border-2 hover:border-2 border-white">MODIFY DATA</button>
+                <button id="view_data" class="color-mad font-bold text-sm bg-slate-100 hover:bg-black hover:text-white font-bold py-2 w-32 border-2 hover:border-2 border-white">VIEW DATA</button>
             </div>
 
         </div>
@@ -103,14 +165,46 @@
 
     <script>
 
+        const bar01Container = document.querySelector('.bar-01-container');
+        const bar02Container = document.querySelector('.bar-02-container');
         const logoAnimation = document.querySelector('.logo-container');
         const buttonsAnimation = document.querySelector('.buttons-container');
 
-        // Sort of an animation event listener, kind of handy.
+        // Buttons Wooooooo, love so much my buttons.
+        const uploadCSV_Button = document.getElementById('upload_csv');
+        const modifyData_Button = document.getElementById('modify_data');
+        const viewData_Button = document.getElementById('view_data');
+
+        // Animation event listener, kind of handy.
         logoAnimation.addEventListener('animationend', () => {
             console.log('Animation ended', buttonsAnimation.style.animationPlayState);
             buttonsAnimation.style.animationPlayState = "running";
         });
+
+        uploadCSV_Button.addEventListener('click', () => {
+
+            logoAnimation.classList.remove('logo-animation-in');
+            logoAnimation.classList.add('logo-animation-out');
+
+            bar01Container.classList.remove('bar-animation-in');
+            bar01Container.classList.add('bar-animation-out');
+
+            bar02Container.classList.remove('bar-animation-in');
+            bar02Container.classList.add('bar-animation-out');
+
+            buttonsAnimation.classList.remove('buttons-animation-in');
+            buttonsAnimation.classList.add('buttons-animation-out');
+
+        });
+
+        modifyData_Button.addEventListener('click', () => {
+            alert("Button clicks!")
+        })
+
+        viewData_Button.addEventListener('click', () => {
+
+        })
+
 
     </script>
 
