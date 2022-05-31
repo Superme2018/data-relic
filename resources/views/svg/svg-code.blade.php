@@ -122,11 +122,6 @@
 
     /* Other */
 
-    @keyframes long-up {
-        0%   { left:0; top:0px; opacity: 1; }
-        100%  { left:-80%; top:0px; opacity: 0; }
-    }
-
     .backgroud-color {
         background: linear-gradient(180deg, rgba(13,17,16,1) 0%, rgb(9, 18, 27) 100%);
     }
