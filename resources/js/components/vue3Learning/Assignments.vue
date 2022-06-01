@@ -1,11 +1,19 @@
 <template>
     <div class="container">
 
-        <section class="space-y-5">
-            <example-assignment-list :assignments="filters.inProgress" title="Tasks in progress:"></example-assignment-list>
-            <example-assignment-list :assignments="filters.completed" title="Tasks Completed:"></example-assignment-list>
+        <section class="flex gap-8">
 
-            <example-assignment-create @add="add"></example-assignment-create>
+            <example-assignment-list :assignments="filters.inProgress" title="Tasks in progress:">
+                <example-assignment-create @add="add"></example-assignment-create>
+            </example-assignment-list>
+
+            <example-assignment-list
+                v-show="showComplete"
+                :assignments="filters.completed"
+                title="Tasks Completed:"
+                can-hide
+                @hideList="showComplete = !showComplete">
+            </example-assignment-list>
 
         </section>
 
@@ -45,7 +53,8 @@
                 greeting: 'hello world!',
                 buttonClasse: 'text-green',
                 active: false,
-                todos: []
+                todos: [],
+                showComplete: true
             };
         },
         mounted() {

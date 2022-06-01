@@ -1,7 +1,15 @@
 <template>
     <div class="container">
-        <section v-show="assignments.length">
-            <h2 class="font-bold mb-2">{{ title }} <span>({{ assignments.length }})</span></h2>
+        <section v-show="assignments.length" class="w-60 bg-gray-700 p-4 border border-gray-600 rounded-l">
+
+            <div class="flex justify-between items-start">
+                <h2 class="font-bold mb-2">
+                    {{ title }}
+                    <span>({{ assignments.length }})
+                    </span>
+                </h2>
+                <button v-show="canHide" @click="$emit('hideList')">&times;</button>
+            </div>
 
             <example-assignment-tags
                 v-model:currentTag="currentTag"
@@ -16,6 +24,9 @@
                     :task="task">
                 </example-assignment>
             </ul>
+
+            <slot></slot>
+
         </section>
     </div>
 </template>
@@ -24,7 +35,8 @@
     export default {
         props: {
             assignments: Array,
-            title: String
+            title: String,
+            canHide: { type: Boolean, default: false }
         },
         data()
         {

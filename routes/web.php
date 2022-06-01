@@ -18,7 +18,7 @@ Route::get('/tailwind', function () {
 });
 
 Route::get('/svg-animation', function () {
-    return view('svg/svg-code');
+    return view('svg/svg-animation-ui-sequence');
 });
 
 Route::get('/', function () {

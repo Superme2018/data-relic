@@ -10,8 +10,37 @@
 
 <body class="h-full grid place-items-center bg-gray-800 text-white">
 
-    <div id="app">
+    <div id="app" class="grid gap-6">
+
         <example-assignments></example-assignments>
+        <example-assignment-panel>
+
+            <template v-slot:heading>
+                Heading of th Bla, bla.
+            </template>
+
+            <template v-slot:body>
+                Bla, bla, ballla balalalal val.
+            </template>
+
+        </example-assignment-panel>
+
+        <example-assignment-panel>
+
+            <template v-slot:body>
+                Bla, bla, ballla balalalal val.
+            </template>
+
+        </example-assignment-panel>
+
+        <example-assignment-panel theme="light">
+
+            <template v-slot:body>
+                Bla, bla, ballla balalalal val.
+            </template>
+
+        </example-assignment-panel>
+
     </div>
 
     <script src="{{ mix('/js/app.js') }}"></script>
