@@ -14,6 +14,8 @@ import AssignmentCreate from './components/vue3Learning/AssignmentCreate.vue';
 import AssignmentTags from './components/vue3Learning/AssignmentTags.vue';
 import AssignmentPanel from './components/vue3Learning/Panel.vue';
 
+import HomeModule from './components/data_relic/HomeModule.vue';
+
 const app = createApp({});
 
 app.component('table-component', TableComponent)
@@ -24,6 +26,8 @@ app.component('table-component', TableComponent)
    .component('example-assignment-create', AssignmentCreate)
    .component('example-assignment-tags', AssignmentTags)
    .component('example-assignment-panel', AssignmentPanel)
+
+   .component('data-relic-module-home', HomeModule)
    .mount('#app');
 
 require('./bootstrap');

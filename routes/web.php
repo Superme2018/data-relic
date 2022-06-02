@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Route;
 
 */
 
+Route::get('/home', function () {
+    return view('data-relic/spa-container');
+});
+
 Route::get('/post-processing-effects', function () {
     return view('other/post-processing-effects');
 });
