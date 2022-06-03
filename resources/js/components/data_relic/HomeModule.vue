@@ -4,19 +4,19 @@
 
         <transition name="bar">
             <div v-show="showBar" style="transition-delay: 0.2s" class="bar-01-container">
-                <img class="10 w-full" :src="'svg/ui-element.svg?' + randNumber" alt="" >
+                <img class="10 w-full" :src="'svg/ui-element.svg?' + randNumber">
             </div>
         </transition>
 
         <transition name="logo">
             <div v-show="showLogo" class="logo-container">
-                <img class="w-full color-animation" :src="'svg/text-logo.svg?' + randNumber" alt="" >
+                <img class="w-full color-animation" :src="'svg/text-logo.svg?' + randNumber" alt="data relic logo" >
             </div>
         </transition>
 
         <transition name="bar">
             <div v-show="showBar" style="transition-delay: 0.2s" class="bar-02-container">
-                <img class="w-full" :src="'svg/ui-element.svg?' + randNumber" alt="" >
+                <img class="w-full" :src="'svg/ui-element.svg?' + randNumber" >
             </div>
         </transition>
 
