@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 */
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('data-relic/spa-container');
 });
 
@@ -25,7 +25,7 @@ Route::get('/svg-animation', function () {
     return view('svg/svg-animation-ui-sequence');
 });
 
-Route::get('/', function () {
+Route::get('/vue-3-js-learning', function () {
     return view('vue3jsLearning/vue-assignments');
     //return view('vue-non-component-basic');
 });
