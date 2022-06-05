@@ -2931,12 +2931,17 @@
   "resolved" "https://registry.npmjs.org/file-type/-/file-type-12.4.2.tgz"
   "version" "12.4.2"
 
+"filepond-plugin-file-validate-size@^2.2.7":
+  "integrity" "sha512-I3yWDgzu8J3cfxeeUXT4O9zVqq7GcpQ5BAl4//E1p8DB0DV441HVtg0/kPrAvIwmO9bSTeiuQDr+n+Q4rg9yZA=="
+  "resolved" "https://registry.npmjs.org/filepond-plugin-file-validate-size/-/filepond-plugin-file-validate-size-2.2.7.tgz"
+  "version" "2.2.7"
+
 "filepond-plugin-file-validate-type@^1.2.8":
   "integrity" "sha512-UBTqIWbk5+5R0GBELI8svu01MHWjFSLfc9DfCMvFtHKXLdJMxY1p37ChC4YKQjhfODaTuvLnNVRsukMGMFZBBg=="
   "resolved" "https://registry.npmjs.org/filepond-plugin-file-validate-type/-/filepond-plugin-file-validate-type-1.2.8.tgz"
   "version" "1.2.8"
 
-"filepond@^4.30.4", "filepond@>=1.x <5.x", "filepond@>=4.7.4 < 5.x":
+"filepond@^4.30.4", "filepond@>=1.x <5.x", "filepond@>=3.1.2 <5.x", "filepond@>=4.7.4 < 5.x":
   "integrity" "sha512-FCwsMvG9iiEs6uobdDrTaKsCgsqys0NuLgPPD8n37AYVYBiiDkrPkk9MSIU5rT2FahYcL1bScYI9huIPtlzqyA=="
   "resolved" "https://registry.npmjs.org/filepond/-/filepond-4.30.4.tgz"
   "version" "4.30.4"

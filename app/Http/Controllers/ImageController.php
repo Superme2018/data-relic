@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// Requests
+use App\Http\Requests\StoreZipFileRequest;
+
 // Models
 use App\Models\CsvFile;
 
@@ -19,34 +22,40 @@ class ImageController extends Controller
         // return all images
     }
 
-    public function store(Request $request)
+    public function store(StoreZipFileRequest $request)
     {
-        // Check the response.
-        if(!$request->hasFile('image'))
+
+        // Check validator exits.
+        if (!isset($request->validator))
         {
-            return response()->json(['error' => 'There is no image present.'], 400);
+            return response()->json(['error' => 'Failed to execute the validation process.'], 400);
         }
 
-        // Validate the request.
-        $request->validate([
-            'image' => 'required|file|image|'
-        ]);
+        // Check that the validation passed.
+        if ($request->validator->fails())
+        {
+            return response()->json($request->validator->getMessageBag()->getMessages(), 400);
+        }
 
-        // Store the file and catch the $path.
-        if(!$path = $request->file('image')->store('public/images'))
+        // Store the file to the HDD and catch the $path.
+        if(!$path = $request->file('file')->store('files/csv_files/zipped'))
         {
             return response()->json(['error' => 'File did not save to server storage.'], 400);
         }
 
-        $uploadedFile = $request->file('image');
+        // Construct a file request object, to be used for parameter access.
+        $uploadedFile = $request->file('file');
 
-        $image = CsvFile::create([
+        // Decompress and check the file is a .csv here.
+        // ....
+
+        $csvFile = CsvFile::create([
             'name' => $uploadedFile->hashName(),
             'extension' => $uploadedFile->extension(),
             'size' => $uploadedFile->getSize()
         ]);
 
-        return $image;
+        return $csvFile; // Not sure this is required, but used for debugging for the time being.
 
     }
 }

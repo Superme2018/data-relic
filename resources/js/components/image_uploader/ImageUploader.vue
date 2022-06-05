@@ -2,11 +2,12 @@
     <div class="mt-4">
 
         <file-pond-uploader
-            name="image"
+            name="file"
             ref="pond"
-            label-idle="Click to choose image, or drag here ..."
+            label-idle="Drop zip file here..."
             @init="filepondInitialized"
-            accepted-file-types="image/*"
+            accepted-file-types="application/x-zip-compressed, multipart/x-zip"
+            max-file-size="10MB"
         />
 
     </div>
@@ -16,6 +17,7 @@
 
     import vueFilePond, { setOptions } from 'vue-filepond';
     import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
+    import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
 
     import "filepond/dist/filepond.min.css";
 
@@ -31,7 +33,7 @@
         }
     });
 
-    const FilePond = vueFilePond(FilePondPluginFileValidateType);
+    const FilePond = vueFilePond(FilePondPluginFileValidateType, FilePondPluginFileValidateSize);
 
     export default {
         components : {
