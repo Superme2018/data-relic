@@ -19,9 +19,10 @@ class ImageController extends Controller
 
     public function show()
     {
-        // return all images
+        // return a list of uploaded files.
     }
 
+    // Store and decompress a zipped (*compressed) .CSV file.
     public function store(StoreZipFileRequest $request)
     {
 
