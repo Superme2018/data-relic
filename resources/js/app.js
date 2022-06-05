@@ -1,5 +1,5 @@
 /**
- * VUE 3 .. a note here, Laravel 9 defaults with vue2.
+ * VUE 3 .. a *note here, Laravel 9 defaults with vue2.
  */
 
 import { createApp } from 'vue'
@@ -14,7 +14,12 @@ import AssignmentCreate from './components/vue3Learning/AssignmentCreate.vue';
 import AssignmentTags from './components/vue3Learning/AssignmentTags.vue';
 import AssignmentPanel from './components/vue3Learning/Panel.vue';
 
+// Data Relic Modules
 import HomeModule from './components/data_relic/HomeModule.vue';
+
+//Image uploader components.
+import ImageUploader from './components/image_uploader/ImageUploader.vue';
+
 
 const app = createApp({});
 
@@ -28,6 +33,8 @@ app.component('table-component', TableComponent)
    .component('example-assignment-panel', AssignmentPanel)
 
    .component('data-relic-module-home', HomeModule)
+
+   .component('image-uploader', ImageUploader)
    .mount('#app');
 
 require('./bootstrap');

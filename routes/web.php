@@ -1,13 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ImageController;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-
 */
+
+// Image uploader
+Route::get('/image-uploader', [ImageController::class, 'index']);
+Route::get('/images', [ImageController::class, 'show']);
+Route::post('/upload', [ImageController::class, 'store']);
 
 Route::get('/', function () {
     return view('data-relic/spa-container');

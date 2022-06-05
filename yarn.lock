@@ -2931,6 +2931,16 @@
   "resolved" "https://registry.npmjs.org/file-type/-/file-type-12.4.2.tgz"
   "version" "12.4.2"
 
+"filepond-plugin-file-validate-type@^1.2.8":
+  "integrity" "sha512-UBTqIWbk5+5R0GBELI8svu01MHWjFSLfc9DfCMvFtHKXLdJMxY1p37ChC4YKQjhfODaTuvLnNVRsukMGMFZBBg=="
+  "resolved" "https://registry.npmjs.org/filepond-plugin-file-validate-type/-/filepond-plugin-file-validate-type-1.2.8.tgz"
+  "version" "1.2.8"
+
+"filepond@^4.30.4", "filepond@>=1.x <5.x", "filepond@>=4.7.4 < 5.x":
+  "integrity" "sha512-FCwsMvG9iiEs6uobdDrTaKsCgsqys0NuLgPPD8n37AYVYBiiDkrPkk9MSIU5rT2FahYcL1bScYI9huIPtlzqyA=="
+  "resolved" "https://registry.npmjs.org/filepond/-/filepond-4.30.4.tgz"
+  "version" "4.30.4"
+
 "fill-range@^7.0.1":
   "integrity" "sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ=="
   "resolved" "https://registry.npmjs.org/fill-range/-/fill-range-7.0.1.tgz"
@@ -5523,6 +5533,11 @@
   "resolved" "https://registry.npmjs.org/vm-browserify/-/vm-browserify-1.1.2.tgz"
   "version" "1.1.2"
 
+"vue-filepond@^7.0.3":
+  "integrity" "sha512-pYZ5TxGwFiiiVlRdzlJl0AyHE0/rEZiHm/0sYhIleFjV2VdGWTyxSqErN/AQwrwv32AeiNbui46vVB06Dl07ow=="
+  "resolved" "https://registry.npmjs.org/vue-filepond/-/vue-filepond-7.0.3.tgz"
+  "version" "7.0.3"
+
 "vue-loader@^17.0.0":
   "integrity" "sha512-OWSXjrzIvbF2LtOUmxT3HYgwwubbfFelN8PAP9R9dwpIkj48TVioHhWWSx7W7fk+iF5cgg3CBJRxwTdtLU4Ecg=="
   "resolved" "https://registry.npmjs.org/vue-loader/-/vue-loader-17.0.0.tgz"
@@ -5548,7 +5563,7 @@
     "de-indent" "^1.0.2"
     "he" "^1.1.0"
 
-"vue@^3.2.33", "vue@3.2.33", "vue@next":
+"vue@^3.2.33", "vue@>=3 < 4", "vue@3.2.33", "vue@next":
   "integrity" "sha512-si1ExAlDUrLSIg/V7D/GgA4twJwfsfgG+t9w10z38HhL/HA07132pUQ2KuwAo8qbCyMJ9e6OqrmWrOCr+jW7ZQ=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.2.33.tgz"
   "version" "3.2.33"
