@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ImageController;
+use App\Http\Controllers\CSVImporterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -10,9 +10,9 @@ use App\Http\Controllers\ImageController;
 */
 
 // Image uploader
-Route::get('/image-uploader', [ImageController::class, 'index']);
-Route::get('/images', [ImageController::class, 'show']);
-Route::post('/upload', [ImageController::class, 'store']);
+Route::get('/image-uploader', [CSVImporterController::class, 'index']);
+Route::get('/images', [CSVImporterController::class, 'show']);
+Route::post('/upload', [CSVImporterController::class, 'store']);
 
 Route::get('/', function () {
     return view('data-relic/spa-container');

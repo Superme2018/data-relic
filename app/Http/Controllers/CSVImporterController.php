@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 // Core Systems
-use App\CORE_Systems\CSV\Upload;
+use App\CORE_Systems\CSV\Upload; // Hmmm, not sure about this as the upload will be a .zip.
+use App\CORE_Systems\CSV\Uncompress;
 
 // Framework
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ use App\Http\Requests\StoreZipFileRequest;
 // Models
 use App\Models\CsvFile;
 
-class ImageController extends Controller
+class CSVImporterController extends Controller
 {
     public function index()
     {
