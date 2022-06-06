@@ -1,6 +1,6 @@
 # DATA RELIC
 
-In the face of inevitable failure, the **CSV** remains king.
+In the face of inevitable failure, the **CSV** remains king.  
 Exploring the pure epic'ness, of the most interoperable data source known to man and possibly bots.  
   
 Below is an overview of the application that is getting built here.  
