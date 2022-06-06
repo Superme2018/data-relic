@@ -1,7 +1,10 @@
 <?php
 
+// Controllers
+use App\Http\Controllers\FileUploadController;
+
+// Framework
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CSVImporterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -9,10 +12,10 @@ use App\Http\Controllers\CSVImporterController;
 |--------------------------------------------------------------------------
 */
 
-// Image uploader
-Route::get('/image-uploader', [CSVImporterController::class, 'index']);
-Route::get('/images', [CSVImporterController::class, 'show']);
-Route::post('/upload', [CSVImporterController::class, 'store']);
+// File uploader
+Route::get('/file-uploader', [FileUploadController::class, 'index']);
+Route::get('/get-files', [FileUploadController::class, 'getFiles']);
+Route::post('/upload-file', [FileUploadController::class, 'uploadFile']);
 
 Route::get('/', function () {
     return view('data-relic/spa-container');

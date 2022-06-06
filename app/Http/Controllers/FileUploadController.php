@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 // Core Systems
-use App\CORE_Systems\CSV\Upload; // Hmmm, not sure about this as the upload will be a .zip.
+use App\CORE_Systems\CSV\Upload;
 use App\CORE_Systems\CSV\Uncompress;
 
 // Framework
@@ -15,20 +15,20 @@ use App\Http\Requests\StoreZipFileRequest;
 // Models
 use App\Models\CsvFile;
 
-class CSVImporterController extends Controller
+class FileUploadController extends Controller
 {
     public function index()
     {
         return view('images.index');
     }
 
-    public function show()
+    public function getFiles()
     {
         // return a list of uploaded files.
     }
 
     // Store and decompress a zipped (*compressed) .CSV file.
-    public function store(StoreZipFileRequest $request)
+    public function uploadFile(StoreZipFileRequest $request)
     {
 
         // Check validator exits.
