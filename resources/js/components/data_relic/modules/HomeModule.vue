@@ -60,10 +60,6 @@
             this.setActive();
         },
         methods: {
-            mountedFunction()
-            {
-              console.log(this.randNumber);
-            },
             transitionEnded()
             {
                 this.colorMad = true;
