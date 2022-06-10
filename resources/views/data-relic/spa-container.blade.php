@@ -4,9 +4,9 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1" >
-    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <meta name="csrf_token" content="{{ csrf_token() }}" >
-    <script src="https://cdn.tailwindcss.com"></script>
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 
 </head>
 
