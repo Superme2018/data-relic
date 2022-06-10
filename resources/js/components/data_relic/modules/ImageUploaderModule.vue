@@ -1,11 +1,12 @@
 <template>
     <div
+    id="file-upload-module-container"
     class="grid grid-cols-1 grid-rows-1 gap-5 w-1/2"
     :class="active ? 'inline' : 'hidden'" >
 
         <file-pond-uploader
             name="file"
-            class="border border-dashed border-gray-500 relative h-40"
+            class="border border-dashed border-gray-500 relative h-20 bg-lime-500"
             ref="pond"
             label-idle="Drop zip file here..."
             @init="filepondInitialized"

@@ -126,10 +126,6 @@
         </data-relic-container-main>
     </div>
 
-    <div class="bg-yellow-300 h-[93]">
-        <p>Hello!</p>
-    </div>
-
     <script src="{{ mix('/js/app.js') }}"></script>
 
 </body>

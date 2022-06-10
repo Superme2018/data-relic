@@ -1,6 +1,7 @@
 <template>
 
     <div
+        id="home-module-container"
         class="grid grid-cols-1 grid-rows-1 gap-5 w-1/2"
         :class="active ? 'inline' : 'hidden'">
 
