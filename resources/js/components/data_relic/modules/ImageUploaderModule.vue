@@ -1,8 +1,11 @@
 <template>
-    <div :class="active ? 'inline' : 'hidden'">
+    <div
+    class="grid grid-cols-1 grid-rows-1 gap-5 w-1/2"
+    :class="active ? 'inline' : 'hidden'" >
 
         <file-pond-uploader
             name="file"
+            class="border border-dashed border-gray-500 relative h-40"
             ref="pond"
             label-idle="Drop zip file here..."
             @init="filepondInitialized"
@@ -18,6 +21,8 @@
     import vueFilePond, { setOptions } from 'vue-filepond';
     import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
     import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
+
+    import "filepond/dist/filepond.min.css";
 
     // Added to handle CSRF toke, and also defines the post URL.
     setOptions({

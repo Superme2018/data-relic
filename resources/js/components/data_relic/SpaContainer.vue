@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-1 justify-center justify-items-center items-center h-screen">
+    <div class="grid grid-cols-1 justify-center justify-items-center items-center">
 
         <data-relic-module-home :home-active="homeActive" :rand-number="randNumber"></data-relic-module-home>
         <data-relic-module-image-uploader :uploader-active="uploaderActive"></data-relic-module-image-uploader>
