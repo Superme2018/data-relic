@@ -6,9 +6,9 @@
 
         <file-pond-uploader
             name="file"
-            class="border border-dashed border-gray-500 relative h-20 bg-lime-500"
+            class="rounded-r-lg relative h-20 bg-white outline outline-offset-2 outline-white"
             ref="pond"
-            label-idle="Drop zip file here..."
+            label-idle="Click Here to Select File"
             @init="filepondInitialized"
             accepted-file-types="application/x-zip-compressed, multipart/x-zip"
             max-file-size="10MB"

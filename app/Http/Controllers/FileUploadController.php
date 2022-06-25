@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 // Core Systems
-use App\CORE_Systems\CSV\Upload;
-use App\CORE_Systems\CSV\Uncompress;
+use App\CORE_Systems\CSV_Service\Files;
 
 // Framework
 use Illuminate\Http\Request;
@@ -22,7 +21,7 @@ class FileUploadController extends Controller
         return view('images.index');
     }
 
-    public function getFiles()
+    public function getListOfFiles()
     {
         // return a list of uploaded files.
     }
@@ -49,17 +48,20 @@ class FileUploadController extends Controller
             return response()->json(['error' => 'File did not save to server storage.'], 400);
         }
 
-        // Construct a file request object, to be used for parameter access.
-        $uploadedFile = $request->file('file');
+        // Construct a file request object, from the file input.
+        if(!$uploadedFile = $request->file('file'))
+        {
+            return response()->json(['error' => 'No file supplied.'], 400);
+        }
 
         // Decompress and check the file is a .csv here.
         // ....
 
-        $csvFile = CsvFile::create([
-            'name' => $uploadedFile->hashName(),
-            'extension' => $uploadedFile->extension(),
-            'size' => $uploadedFile->getSize()
-        ]);
+        // Hmmm, should one depend on the test to check for this ot also handle the issue if hit at runtime.
+        if(!$csvFile = Files::createFileRecord($uploadedFile))
+        {
+            return response()->json(['error' => 'Failed to create a file record.'], 400);
+        }
 
         return $csvFile; // Not sure this is required, but used for debugging for the time being.
 
