@@ -4,7 +4,7 @@ Exploring the pure epic'ness, of the most interoperable data source known to man
 In the face of inevitable failure, the **CSV** remains king.  
    
 Below is an overview of the application that is getting built here.  
-The overview and concept will change over time but the idea in motion planed out and visualized below (v):
+The overview and concept will change over time. The idea in motion planed out and visualized below:
 
 ![alt text](https://bafybeif5k6q6dwg2fxekxa5vktasf7fgtq2rqwsub2b4sqchpwkkzkru6q.ipfs.infura-ipfs.io/)
 
