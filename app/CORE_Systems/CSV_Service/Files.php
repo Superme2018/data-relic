@@ -16,7 +16,7 @@ class Files
     {
         if(!$csvFile = CSVServiceUtilities::storeCsvFile($uploadedFile))
         {
-            return false;
+            return 0;
         }
 
         return $csvFile;
@@ -25,12 +25,6 @@ class Files
     // Gets a list of the files, that have been uploaded.
     public static function getListOfFiles()
     {
-
-        if(!CsvFile::count())
-        {
-            return false;
-        }
-
         return CsvFile::all();
     }
 

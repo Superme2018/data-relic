@@ -35,6 +35,13 @@ return [
 
     'connections' => [
 
+
+        'sqlite_testing' => [
+            'driver' => 'sqlite',
+            'database' => database_path('testing.sqlite'),
+            'prefix' => '',
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
