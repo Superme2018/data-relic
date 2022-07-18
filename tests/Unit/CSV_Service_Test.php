@@ -14,7 +14,8 @@ class CSV_Service extends TestCase
     public function create_upload_record()
     {
         // Need to use mocking here to create a file input object to be passed over to the class.
-        //$this->assertCount(1, Files::createFileRecord());
+        //testcase::factory(Files::class, 3)->create();
+        Files::factory()->count(3)->create();
     }
 
     /** @test */

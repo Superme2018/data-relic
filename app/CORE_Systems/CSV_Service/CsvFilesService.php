@@ -8,8 +8,13 @@ use App\Models\CsvFile;
 // Utilities
 use App\CORE_Systems\CSV_Service\Utilities as CSVServiceUtilities;
 
-class Files
+// Framework
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class CsvFilesService
 {
+
+    use HasFactory;
 
     // Create a file record.
     public static function createFileRecord($uploadedFile)

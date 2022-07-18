@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 // Core Systems
-use App\CORE_Systems\CSV_Service\Files;
+use App\CORE_Systems\CSV_Service\CsvFilesService;
 
 // Framework
 use Illuminate\Http\Request;
@@ -58,7 +58,7 @@ class FileUploadController extends Controller
         // ....
 
         // Hmmm, should one depend on the test to check for this ot also handle the issue if hit at runtime.
-        if(!$csvFile = Files::createFileRecord($uploadedFile))
+        if(!$csvFile = CsvFilesService::createFileRecord($uploadedFile))
         {
             return response()->json(['error' => 'Failed to create a file record.'], 400);
         }
